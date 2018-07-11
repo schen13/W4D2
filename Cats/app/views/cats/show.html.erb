@@ -1,0 +1,9 @@
+<ul>
+  <%= render "cat", cat: @cat %>
+  <a href=" <%= edit_cat_url(@cat) %> ">Edit Profile</a>
+  <form action="<%= cat_url(@cat) %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" name="" value="Delete Profile">
+  </form>
+</ul>
+<a href="<%= cats_url %>">Back to List</a>
